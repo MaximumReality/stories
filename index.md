@@ -1,5 +1,5 @@
 ---
-title: Maximum Reality Story Library
+ Maximum Reality Story Library
 ---
 
 # 🌌 Welcome to the Maximum Reality Universe

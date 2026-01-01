@@ -28,9 +28,8 @@ If you enjoy these stories and want to support the author, there’s a Buy Me a 
 Everyone deserves a little magic.
 
 <div align="center">
-💖 Support Maximum Reality 💖
+💖 Support Maximum Reality 💖  
 [Shop](https://maximum-reality-shop.fourthwall.com/) | [Coffee](https://buymeacoffee.com/MaximumReality) | [YouTube](https://www.youtube.com/@maximumrealityLori)  
 
-<span style="font-size:0.6em;">© 2025 Maximum Reality</span>
+<span style="font-size:0.6em;">© 2025–2026 Maximum Reality</span>
 </div>
-

@@ -1,4 +1,6 @@
-# 🐭🐈 Mishmish Steals the Date Cookies
+---
+title: Mishmish Steals the Date Cookies
+--- 
 
 *Page 1*  
 In a quiet Moroccan kitchen, a tray of warm date cookies cooled on the counter.  

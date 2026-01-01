@@ -26,3 +26,11 @@ Stories, games, and imagination should be accessible to everyone, regardless of 
 If you enjoy these stories and want to support the author, there’s a Buy Me a Coffee link — contribute any amount you choose, or simply enjoy the universe for free.
 
 Everyone deserves a little magic.
+
+<div align="center">
+💖 Support Maximum Reality 💖  
+[Shop](https://maximum-reality-shop.fourthwall.com/) | [Coffee](https://buymeacoffee.com/MaximumReality) | [YouTube](https://www.youtube.com/@maximumrealityLori)  
+
+<span style="font-size:0.6em;">© 2025 Maximum Reality</span>
+</div>
+

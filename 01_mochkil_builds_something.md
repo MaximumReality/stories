@@ -1,4 +1,6 @@
-# 🐈‍⬛ Mochkil Builds Something
+---
+title: Mochkil Builds Something
+---
 
 *Page 1*  
 Mochkil woke up in his cozy Moroccan kitchen.  

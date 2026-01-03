@@ -1,5 +1,7 @@
 ---
-title: Elvie & Eliza Jane: Tree-Top Adventures
+---
+title: "Elvie & Eliza Jane: Tree-Top Adventures"
+---
 ---
 
 # 🌲 Elvie & Eliza Jane: Tree-Top Adventures

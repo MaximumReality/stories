@@ -42,8 +42,10 @@ Azul drifts between multiple overlapping realities — a kitchen, a workshop, an
 
 ![Azul in kitchen](azul_wtw_03_kitchen_observed.PNG)
 
-A quiet Moroccan kitchen with sunlight through a window. A plate of date cookies cools on a counter.  
-Two shapes move too fast to track properly:
+A quiet Moroccan kitchen with sunlight through a window.  
+A plate of date cookies cools on a counter.  
+
+Two shapes move too fast to track properly:  
 - One small and clever  
 - One large and annoyed  
 

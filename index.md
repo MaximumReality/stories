@@ -11,7 +11,7 @@ Stories are illustrated and free for everyone to enjoy.
 
 ## 🐱✨ Azul Series
 
-1. <img src="azul_wtw_01_hero.PNG" alt="Azul hero image" width="120" style="vertical-align:middle; margin-right:8px;"> [Azul Watches the World](azul_wtw_01_hero.PNG) – Azul drifts between stories, quietly observing as reality subtly glitches around him.
+1. <img src="azul_wtw_01_hero.PNG" alt="Azul hero image" width="120" style="vertical-align:middle; margin-right:8px;"> [Azul Watches the World](azul_watches_the_world.md) – Azul drifts between stories, quietly observing as reality subtly glitches around him.
 
 ---
 
@@ -23,7 +23,7 @@ Stories are illustrated and free for everyone to enjoy.
 
 ## 🐭 Mishmish & Bziz Series
 
-1. <img src="mishmish_page6.PNG" alt="Mishmish & Bziz Date Cookies" width="120" style="vertical-align:middle; margin-right:8px;"> [Mishmish & Bziz: Date Cookies Disaster](mishmish_bziz_date_cookies.html) – A chaotic kitchen heist with date cookies.
+1. <img src="mishmish_page6.PNG" alt="Mishmish & Bziz Date Cookies" width="120" style="vertical-align:middle; margin-right:8px;"> [Mishmish & Bziz: Date Cookies Disaster](mishmish_bziz_date_cookies.md) – A chaotic kitchen heist with date cookies.
 
 ---
 

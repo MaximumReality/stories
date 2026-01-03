@@ -4,7 +4,7 @@ title: Maximum Reality Story Library
 
 # 🌌 Welcome to the Maximum Reality Universe
 
-Explore the whimsical world of Azul, Mochkil, Mishmish, Bziz, and more!  
+Explore the whimsical world of Azul, Mochkil, Mishmish, Bziz, Elvie & Eliza Jane, and more!  
 Stories are illustrated and free for everyone to enjoy.  
 
 ---
@@ -24,6 +24,12 @@ Stories are illustrated and free for everyone to enjoy.
 ## 🐭 Mishmish & Bziz Series
 
 1. <img src="mishmish_page6.PNG" alt="Mishmish & Bziz Date Cookies" width="120" style="vertical-align:middle; margin-right:8px;"> [Mishmish & Bziz: Date Cookies Disaster](mishmish_bziz_date_cookies.md) – A chaotic kitchen heist with date cookies.
+
+---
+
+## 👧 Elvie & Eliza Jane Series
+
+1. <img src="elvie_climbing_tree.PNG" alt="Elvie climbing tree" width="120" style="vertical-align:middle; margin-right:8px;"> [Elvie & Eliza Jane: Tree-Top Adventures](elvie_tree_top_adventures.md) – Elvie climbs high to see all of Twin Branch while Mama Eliza Jane keeps a sharp eye from below.
 
 ---
 

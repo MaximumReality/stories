@@ -11,19 +11,19 @@ Stories are illustrated and free for everyone to enjoy.
 
 ## 🐱✨ Azul Series
 
-1. [Azul Watches the World](azul_wtw_01_hero.PNG) – Azul drifts between stories, quietly observing as reality subtly glitches around him.
+1. <img src="azul_wtw_01_hero.PNG" alt="Azul hero image" width="120" style="vertical-align:middle; margin-right:8px;"> [Azul Watches the World](azul_wtw_01_hero.PNG) – Azul drifts between stories, quietly observing as reality subtly glitches around him.
 
 ---
 
 ## 🐈‍⬛ Mochkil Series
 
-1. [Mochkil Builds Something](01_mochkil_builds_something.md) – Mochkil discovers a new idea, adds Moroccan flair, and begins his adventures.
+1. <img src="01_mochkil_builds_something.PNG" alt="Mochkil Builds Something" width="120" style="vertical-align:middle; margin-right:8px;"> [Mochkil Builds Something](01_mochkil_builds_something.md) – Mochkil discovers a new idea, adds Moroccan flair, and begins his adventures.
 
 ---
 
 ## 🐭 Mishmish & Bziz Series
 
-1. [Mishmish & Bziz: Date Cookies Disaster](mishmish_bziz_date_cookies.html) – A chaotic kitchen heist with date cookies.
+1. <img src="mishmish_bziz_date_cookies.PNG" alt="Mishmish & Bziz Date Cookies" width="120" style="vertical-align:middle; margin-right:8px;"> [Mishmish & Bziz: Date Cookies Disaster](mishmish_bziz_date_cookies.html) – A chaotic kitchen heist with date cookies.
 
 ---
 

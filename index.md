@@ -32,6 +32,8 @@ Stories are illustrated and free for everyone to enjoy.
 1. <img src="elvie_climbing_tree.PNG" alt="Elvie climbing tree" width="120" style="vertical-align:middle; margin-right:8px;"> [Elvie & Eliza Jane: Tree-Top Adventures](elvie_tree_top_adventures.md) – Elvie climbs high to see all of Twin Branch while Mama Eliza Jane keeps a sharp eye from below.
 
 ---
+[⬅ Back to Maximum Reality](https://maximumreality.xyz/)
+---
 
 💖 Support Maximum Reality  
 [Shop](https://maximum-reality-shop.fourthwall.com/) | [Coffee](https://buymeacoffee.com/MaximumReality) | [YouTube](https://www.youtube.com/@maximumrealityLori)

@@ -5,80 +5,68 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>The Birthday Mission</title>
   <style>
-  body { 
-    background-color: #0b1021; 
-    color: white; 
-    font-family: -apple-system, sans-serif; 
-    text-align: center; 
-    padding: 15px; 
-    margin: 0;
-  }
-  
-  h1 { color: #ffb6c1; margin: 20px 0; text-shadow: 0 0 10px #ffb6c1; font-size: 1.5rem; }
+    body { 
+      background-color: #0b1021; 
+      color: white; 
+      font-family: -apple-system, sans-serif; 
+      text-align: center; 
+      padding: 0; 
+      margin: 0;
+    }
+    
+    h1 { color: #ffb6c1; margin: 30px 0; text-shadow: 0 0 10px #ffb6c1; font-size: 1.8rem; }
+    
+    .story-container { display: flex; flex-direction: column; width: 100%; gap: 0; }
+    
+    /* Ensures scenes fill the screen on your iPhone 14 Pro Max */
+    .story-container img { width: 100%; display: block; border: none; margin: 0; }
 
-      /* The "Window" Fix */
-    .image-panel {
-      width: 100%;
-      height: 380px; 
-      background-image: url('luna_stella_birthday.PNG');
-      /* This stretches the image to 100% width and 300% height 
-         (since there are 3 panels) */
-      background-size: 100% 300%; 
-      background-repeat: no-repeat;
-      border-radius: 25px;
-      margin: 20px 0;
-      border: 2px solid #ffb6c1;
+    p { 
+      font-size: 1.1rem; 
+      line-height: 1.6; 
+      padding: 25px 20px; 
+      margin: 0;
+      color: #f0f0f0;
+      background: #0b1021; /* Keeps text legible between scenes */
     }
 
-    /* Precise 'Trucker' Coordinates to lock each panel */
-    .top-panel { background-position: 0 0%; }      /* Panel 1: Moon Cookie */
-    .mid-panel { background-position: 0 50%; }     /* Panel 2: Library Tree */
-    .bot-panel { background-position: 0 100%; }    /* Panel 3: Guardians */
+    .back-btn { 
+      display: inline-block; 
+      margin: 40px 0 60px 0;
+      padding: 15px 40px; 
+      color: #ffb6c1; 
+      border: 2px solid #ffb6c1; 
+      border-radius: 50px; 
+      text-decoration: none; 
+      font-weight: bold;
+      background: rgba(255, 182, 193, 0.1);
+    }
 
-  p { 
-    font-size: 1.1rem; 
-    line-height: 1.6; 
-    padding: 0 15px; 
-    margin-bottom: 30px;
-    color: #f0f0f0;
-  }
-
-  .back-btn { 
-    display: inline-block; 
-    margin-top: 20px;
-    margin-bottom: 50px;
-    padding: 15px 40px; 
-    color: #ffb6c1; 
-    border: 2px solid #ffb6c1; 
-    border-radius: 50px; 
-    text-decoration: none; 
-    font-weight: bold;
-    background: rgba(255, 182, 193, 0.1);
-  }
-
-  #surprise { 
-    display: none; 
-    font-size: 3rem; 
-    padding: 20px;
-    border: 3px dotted #ffd700;
-    border-radius: 20px;
-    margin: 20px;
-  }
-</style>
-
+    #surprise { 
+      display: none; 
+      font-size: 2.5rem; 
+      padding: 20px;
+      border: 3px dotted #ffd700;
+      border-radius: 20px;
+      margin: 20px;
+      color: #ffd700;
+    }
+  </style>
 </head>
 <body>
 
   <h1>The Birthday Mission</h1>
 
-  <div class="image-panel top-panel"></div>
-  <p>Luna is turning <b>Two</b>! She found a giant Moon Cookie floating in the stars, but it needs a special birthday glow.</p>
+  <div class="story-container">
+    <img src="scene1.png" alt="Lunaverse Scene 1">
+    <p>Luna is turning <b>Two</b>! She found a giant Moon Cookie floating in the stars, but it needs a special birthday glow.</p>
 
-  <div class="image-panel mid-panel"></div>
-  <p>Deep in the <b>Maximum Reality Library</b>, the books began to sparkle. The girls knew they had to find the legendary "Birthday Chapter" hidden in the Glowing Tree.</p>
+    <img src="scene2.png" alt="Lunaverse Scene 2">
+    <p>Deep in the <b>Maximum Reality Library</b>, the books began to sparkle. The girls knew they had to find the legendary "Birthday Chapter" hidden in the Glowing Tree.</p>
 
-  <div class="image-panel bot-panel"></div>
-  <p>With <b>Stella</b> the Master Explorer leading the way, the <b>Guardians of the Archive</b> saved the day!</p>
+    <img src="scene3.png" alt="Lunaverse Scene 3">
+    <p>With <b>Stella</b> the Master Explorer leading the way, the <b>Guardians of the Archive</b> saved the day!</p>
+  </div>
 
   <div id="surprise">🎂✨<br><span style="font-size: 1.2rem;">HAPPY 2nd BIRTHDAY LUNA!</span></div>
 
@@ -86,7 +74,7 @@
 
   <script>
     const d = new Date();
-    // month is 0 for January, 1 for February, etc.
+    // month is 0 for January, birthday is Jan 15th
     if (d.getMonth() === 0 && d.getDate() === 15) {
       document.getElementById('surprise').style.display = 'block';
     }

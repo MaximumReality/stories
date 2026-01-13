@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Elvie & Eliza Jane | Maximum Reality Stories</title>
+  <style>
+    :root {
+      --mountain-green: #2d4a22;
+      --appalachian-gold: #d4af37;
+      --paper-cream: #f4f1ea;
+      --bark-brown: #3e2723;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    
+    body { 
+      background: #121212; /* Deep background to make the "paper" pop */
+      color: #333; 
+      font-family: "Charter", "Georgia", serif; /* Classic storytelling font */
+      line-height: 1.7;
+    }
+
+    /* The Scroll Effect */
+    .journal-page {
+      background: var(--paper-cream);
+      max-width: 500px;
+      margin: 20px auto;
+      padding: 30px 20px;
+      border-radius: 2px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+      position: relative;
+      border: 1px solid #dcd7c9;
+    }
+
+    header {
+      text-align: center;
+      border-bottom: 1px solid var(--mountain-green);
+      margin-bottom: 40px;
+      padding-bottom: 20px;
+    }
+
+    .location-tag {
+      font-family: monospace;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: var(--mountain-green);
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    h1 {
+      font-size: 1.4rem;
+      color: var(--bark-brown);
+      line-height: 1.2;
+    }
+
+    /* Scene Styling */
+    .scene-block {
+      margin-bottom: 50px;
+    }
+
+    .scene-img {
+      width: 100%;
+      border: 5px solid #fff;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      margin-bottom: 20px;
+      transform: rotate(-1deg); /* Makes it look like a dropped photo */
+    }
+
+    .scene-img.alt {
+      transform: rotate(1deg);
+    }
+
+    .story-text {
+      font-size: 1.05rem;
+      margin-bottom: 20px;
+    }
+
+    /* Appalachian Dialogue Style */
+    .dialogue-box {
+      background: rgba(45, 74, 34, 0.05);
+      border-left: 3px solid var(--mountain-green);
+      padding: 15px;
+      margin: 20px 0;
+      font-style: italic;
+      color: var(--bark-brown);
+    }
+
+    .speaker {
+      font-weight: bold;
+      font-style: normal;
+      display: block;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      margin-bottom: 5px;
+      color: var(--mountain-green);
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 60px;
+      padding-top: 20px;
+      border-top: 1px solid #ddd;
+    }
+
+    .btn-wood {
+      display: inline-block;
+      text-decoration: none;
+      background: var(--bark-brown);
+      color: var(--paper-cream);
+      padding: 12px 25px;
+      border-radius: 4px;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="journal-page">
+    <header>
+      <span class="location-tag">Twin Branch, Kentucky</span>
+      <h1>Tree-Top Adventures</h1>
+    </header>
+
+    <div class="scene-block">
+      <img src="elvie_climbing_tree.PNG" class="scene-img" alt="Elvie climbing">
+      <p class="story-text">Elvie, a sharp-eyed 10-year-old with freckles and tangled brown hair, crouches at the edge of the creek. She eyes the towering old oak tree that’s been calling her name all morning.</p>
+      
+      <div class="dialogue-box">
+        <span class="speaker">Eliza Jane:</span>
+        “Elvie. That tree ain’t your friend. Get down.”
+      </div>
+    </div>
+
+    <div class="scene-block">
+      <img src="elvie_tree_view.PNG" class="scene-img alt" alt="View from the top">
+      <p class="story-text">High up, Elvie perches on a sturdy limb, swaying gently in the breeze. She gasps at the view of the Appalachian ridges stretching in golden greens.</p>
+      
+      <div class="dialogue-box">
+        <span class="speaker">Elvie:</span>
+        “I can see all the way to Broke Leg Falls from here!”
+      </div>
+    </div>
+
+    <div class="scene-block">
+      <img src="eliza_jane_calling.PNG" class="scene-img" alt="Eliza Jane">
+      <div class="dialogue-box">
+        <span class="speaker">Eliza Jane:</span>
+        “Picture or no picture, dirt don’t care. Get down before it introduces itself.”
+      </div>
+      <p class="story-text">Eliza Jane leans against the porch railing, eyes on the girl, dry as ever. One of these days, she knows, gravity is going to lose its patience.</p>
+    </div>
+
+    <div class="scene-block">
+      <img src="elvie_landing.PNG" class="scene-img alt" alt="Safe landing">
+      <p class="story-text">Elvie carefully climbs down, her shoes crunching against fallen leaves. Eliza Jane steps closer, her voice brisk but relieved.</p>
+      
+      <div class="dialogue-box">
+        <span class="speaker">Elvie:</span>
+        “Worth it. Ain’t nothin’ like Twin Branch from up there.”
+      </div>
+    </div>
+
+    <footer>
+      <a href="stories.html" class="btn-wood">Return to Library</a>
+      <p style="margin-top: 30px; font-size: 0.7rem; color: #999; font-style: italic;">
+        A Maximum Reality Heritage Story
+      </p>
+    </footer>
+  </div>
+
+</body>
+</html>

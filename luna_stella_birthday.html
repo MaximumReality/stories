@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Birthday Mission</title>
+  <style>
+    body { background-color: #0b1021; color: white; font-family: sans-serif; text-align: center; padding: 15px; }
+    
+    /* This creates the 'window' for your graphic panels */
+    .image-panel {
+      width: 100%;
+      height: 320px;
+      background-image: url('luna_stella_birthday.PNG');
+      background-size: 100% auto;
+      border-radius: 25px;
+      margin: 20px 0;
+      border: 2px solid #ffb6c1;
+    }
+
+    .top-panel { background-position: top; }
+    .mid-panel { background-position: center; }
+    .bot-panel { background-position: bottom; }
+
+    h1 { color: #ffb6c1; margin-top: 30px; }
+    p { font-size: 1.2rem; line-height: 1.6; padding: 0 10px; }
+
+    #surprise { display: none; font-size: 3rem; animation: pulse 2s infinite; }
+    @keyframes pulse { 0% {transform: scale(1);} 50% {transform: scale(1.1);} 100% {transform: scale(1);} }
+    
+    .back-btn { 
+      display: inline-block; margin: 40px 0; padding: 15px 30px; 
+      color: #ffb6c1; border: 1px solid #ffb6c1; border-radius: 50px; text-decoration: none; 
+    }
+  </style>
+</head>
+<body>
+
+  <h1>The Birthday Mission</h1>
+
+  <div class="image-panel top-panel"></div>
+  <p>Luna is turning <b>Two</b>! She found a giant Moon Cookie floating in the stars, but it needs a special birthday glow.</p>
+
+  <div class="image-panel mid-panel"></div>
+  <p>Deep in the <b>Maximum Reality Library</b>, the books began to sparkle. The girls knew they had to find the legendary "Birthday Chapter" hidden in the Glowing Tree.</p>
+
+  <div class="image-panel bot-panel"></div>
+  <p>With <b>Stella</b> the Master Explorer leading the way, the <b>Guardians of the Archive</b> saved the day!</p>
+
+  <div id="surprise">🎂✨<br><span style="font-size: 1.2rem;">HAPPY 2nd BIRTHDAY LUNA!</span></div>
+
+  <a href="library.html" class="back-btn">Return to Library</a>
+
+  <script>
+    const d = new Date();
+    // month is 0 for January, 1 for February, etc.
+    if (d.getMonth() === 0 && d.getDate() === 15) {
+      document.getElementById('surprise').style.display = 'block';
+    }
+  </script>
+
+</body>
+</html>

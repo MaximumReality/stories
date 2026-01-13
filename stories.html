@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STARRY NIGHT | Story Library</title>
+    <style>
+        :root {
+            --star-gold: #ffd700;
+            --azul-blue: #a2d2ff;
+            --cyber-pink: #ff00ff;
+        }
+
+        body {
+            background-color: #050505;
+            color: #fff;
+            font-family: 'Courier New', monospace;
+            padding: 20px;
+            margin: 0;
+            text-align: center;
+            overflow-x: hidden; /* Prevents stray stars from creating scroll */
+            position: relative;
+        }
+
+        /* ✨ THE FLOATING SPARKLES ✨ */
+        .star {
+            position: absolute;
+            font-size: 12px;
+            pointer-events: none;
+            z-index: 0;
+            animation: twinkle 3s infinite ease-in-out;
+        }
+
+        @keyframes twinkle {
+            0%, 100% { opacity: 0.3; transform: scale(0.8); }
+            50% { opacity: 1; transform: scale(1.2); }
+        }
+
+        header {
+            position: relative;
+            z-index: 10;
+            border-bottom: 1px solid var(--star-gold);
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        h1 { font-size: 1.2rem; color: var(--star-gold); letter-spacing: 3px; }
+
+        .story-grid {
+            position: relative;
+            z-index: 10;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 25px;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .story-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(5px);
+            border-left: 3px solid var(--azul-blue);
+            padding: 15px;
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: #ddd;
+            border-radius: 0 10px 10px 0;
+            transition: 0.3s;
+        }
+
+        .story-card img {
+            width: 70px;
+            height: 70px;
+            object-fit: cover;
+            border-radius: 5px;
+            margin-right: 15px;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .series-tag { font-size: 9px; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 5px; }
+        .azul-tag { color: var(--azul-blue); }
+        .mochkil-tag { color: #ff8c00; }
+
+        .back-home {
+            position: relative;
+            z-index: 10;
+            margin-top: 50px;
+            display: inline-block;
+            color: var(--star-gold);
+            text-decoration: none;
+            font-size: 10px;
+            border: 1px solid var(--star-gold);
+            padding: 10px 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <span class="star" style="top: 5%; left: 10%;">✨</span>
+    <span class="star" style="top: 15%; left: 85%; animation-delay: 1s;">🌟</span>
+    <span class="star" style="top: 40%; left: 5%; animation-delay: 0.5s;">✨</span>
+    <span class="star" style="top: 60%; left: 90%; animation-delay: 2s;">🌟</span>
+    <span class="star" style="top: 80%; left: 15%; animation-delay: 1.5s;">✨</span>
+    <span class="star" style="top: 95%; left: 75%;">🌟</span>
+
+    <header>
+        <h1>🌌 STARRY_NIGHT_ARCHIVE</h1>
+        <p style="font-size: 10px; color: #888;">✨ Where every story is a constellation ✨</p>
+    </header>
+
+    <div class="story-grid">
+        <a href="azul_watches_the_world.html" class="story-card">
+            <img src="azul_wtw_01_hero.PNG" alt="Azul">
+            <div>
+                <div class="series-tag azul-tag">AZUL SERIES</div>
+                <div style="font-weight: bold;">Watches the World</div>
+            </div>
+        </a>
+
+        <a href="01_mochkil_builds_something.html" class="story-card" style="border-left-color: #ff8c00;">
+            <img src="mochkil_kitchen.PNG" alt="Mochkil">
+            <div>
+                <div class="series-tag mochkil-tag">MOCHKIL SERIES</div>
+                <div style="font-weight: bold;">Mochkil Builds Something</div>
+            </div>
+        </a>
+
+        </div>
+
+    <a href="index.html" class="back-home">RETURN TO COMMAND CENTER</a>
+
+</body>
+</html>

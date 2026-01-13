@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Azul Watches the World | Maximum Reality</title>
+  <style>
+    :root {
+      --azul-blue: #a2d2ff;
+      --glitch-cyan: #00f2ff;
+      --quantum-bg: #050508;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    
+    body { 
+      background: var(--quantum-bg); 
+      color: #ececec; 
+      font-family: 'Avenir Next', -apple-system, sans-serif;
+      line-height: 1.8;
+      overflow-x: hidden;
+    }
+
+    /* Quantum Floating Particles */
+    .quantum-field {
+      position: fixed;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background: radial-gradient(circle at 50% 50%, #1a1a2e 0%, #050508 100%);
+      z-index: -1;
+    }
+
+    /* Story Container */
+    .story-wrapper {
+      max-width: 500px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+
+    /* Scene Styling */
+    .scene {
+      margin-bottom: 80px;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 1s ease-out;
+    }
+
+    .scene.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .scene-img {
+      width: 100%;
+      border-radius: 20px;
+      border: 1px solid rgba(162, 210, 255, 0.2);
+      box-shadow: 0 0 20px rgba(0, 242, 255, 0.1);
+      margin-bottom: 25px;
+    }
+
+    /* Glitch Typography */
+    .observation {
+      font-size: 1.1rem;
+      font-weight: 300;
+      letter-spacing: 0.5px;
+      text-align: center;
+    }
+
+    .glitch-text {
+      color: var(--azul-blue);
+      text-transform: uppercase;
+      font-size: 0.7rem;
+      letter-spacing: 4px;
+      display: block;
+      margin-bottom: 10px;
+      opacity: 0.7;
+    }
+
+    .poetry-block {
+      border-right: 1px solid var(--azul-blue);
+      padding-right: 20px;
+      text-align: right;
+      margin: 30px 0;
+      font-style: italic;
+      color: var(--azul-blue);
+    }
+
+    /* Navigation */
+    footer {
+      text-align: center;
+      padding-bottom: 100px;
+    }
+
+    .back-btn {
+      text-decoration: none;
+      color: var(--azul-blue);
+      border: 1px solid var(--azul-blue);
+      padding: 12px 30px;
+      border-radius: 2px;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      transition: 0.3s;
+    }
+
+    .back-btn:active {
+      background: var(--azul-blue);
+      color: #000;
+      box-shadow: 0 0 20px var(--azul-blue);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="quantum-field"></div>
+
+  <div class="story-wrapper">
+
+    <div class="scene visible">
+      <img src="azul_wtw_01_hero.PNG" class="scene-img">
+      <span class="glitch-text">DATA_NODE: AZUL_FLOATS</span>
+      <p class="observation">Not falling. Not flying. Just… <em>there</em>.</p>
+      <p class="observation" style="font-size: 0.9rem; color: #888; margin-top: 15px;">Light bends gently around him, as if the world has agreed to be polite.</p>
+    </div>
+
+    <div class="scene visible">
+      <img src="azul_wtw_02_somewhere_between.PNG" class="scene-img">
+      <div class="poetry-block">
+        Below him:<br>A kitchen.<br>A street.<br>A room full of ideas.
+      </div>
+      <p class="observation">Azul blinks.</p>
+    </div>
+
+    <div class="scene visible">
+      <img src="azul_wtw_03_kitchen_observed.PNG" class="scene-img">
+      <span class="glitch-text">ANOMALY_DETECTED</span>
+      <p class="observation">Two shapes move too fast to track properly. There is chaos. There is sugar in the air.</p>
+      <p class="observation" style="margin-top: 10px; font-weight: bold;">Azul tilts his head. He does not intervene.</p>
+    </div>
+
+    <div class="scene visible">
+      <img src="azul_wtw_05_streetlight_glitch.PNG" class="scene-img">
+      <p class="observation">The words “Maximum Reality” faintly scratched into the metal pole. Subtle digital glitches in the environment.</p>
+    </div>
+
+    <div class="scene visible">
+      <img src="azul_wtw_06_looks_at_you.PNG" class="scene-img">
+      <span class="glitch-text">EYE_CONTACT_INITIATED</span>
+      <p class="observation">A calm, knowing expression. Intimate, reflective, emotionally warm.</p>
+    </div>
+
+    <div class="scene visible">
+      <img src="azul_wtw_07_drifting_away.PNG" class="scene-img">
+      <div class="poetry-block" style="border-right: none; border-left: 1px solid var(--azul-blue); text-align: left; padding-left: 20px;">
+        Things are built.<br>Cookies are stolen.<br>Chaos behaves as expected.
+      </div>
+      <p class="observation" style="color: var(--azul-blue);">Azul drifts on. The world turns. Reality holds.</p>
+    </div>
+
+    <footer>
+      <a href="stories.html" class="back-btn">Exit Archive</a>
+    </footer>
+
+  </div>
+
+  <script>
+    // Simple intersection observer to fade in scenes as you scroll
+    const scenes = document.querySelectorAll('.scene');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    scenes.forEach(scene => observer.observe(scene));
+  </script>
+
+</body>
+</html>

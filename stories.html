@@ -1,134 +1,227 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>STARRY NIGHT | Story Library</title>
-    <style>
-        :root {
-            --star-gold: #ffd700;
-            --azul-blue: #a2d2ff;
-            --cyber-pink: #ff00ff;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Story Archive | Maximum Reality</title>
+  <style>
+    :root {
+      --star-gold: #ffd700;
+      --azul-blue: #a2d2ff;
+      --cyber-pink: #ff00ff;
+      --mochkil-orange: #ff8c00;
+      --mish-green: #32cd32;
+    }
 
-        body {
-            background-color: #050505;
-            color: #fff;
-            font-family: 'Courier New', monospace;
-            padding: 20px;
-            margin: 0;
-            text-align: center;
-            overflow-x: hidden; /* Prevents stray stars from creating scroll */
-            position: relative;
-        }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    
+    body { 
+      background: #000; 
+      color: #fff; 
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
 
-        /* ✨ THE FLOATING SPARKLES ✨ */
-        .star {
-            position: absolute;
-            font-size: 12px;
-            pointer-events: none;
-            z-index: 0;
-            animation: twinkle 3s infinite ease-in-out;
-        }
+    /* Floating Stars Animation */
+    .bg-stars {
+      position: fixed;
+      top: 0; left: 0; width: 100%; height: 100%;
+      pointer-events: none;
+      z-index: 0;
+    }
 
-        @keyframes twinkle {
-            0%, 100% { opacity: 0.3; transform: scale(0.8); }
-            50% { opacity: 1; transform: scale(1.2); }
-        }
+    .star {
+      position: absolute;
+      animation: twinkle 4s infinite ease-in-out;
+      opacity: 0.5;
+    }
 
-        header {
-            position: relative;
-            z-index: 10;
-            border-bottom: 1px solid var(--star-gold);
-            padding-bottom: 20px;
-            margin-bottom: 30px;
-        }
+    @keyframes twinkle {
+      0%, 100% { opacity: 0.3; transform: scale(0.8); }
+      50% { opacity: 1; transform: scale(1.1); }
+    }
 
-        h1 { font-size: 1.2rem; color: var(--star-gold); letter-spacing: 3px; }
+    /* Content Layout */
+    .container {
+      position: relative;
+      z-index: 10;
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+    }
 
-        .story-grid {
-            position: relative;
-            z-index: 10;
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 25px;
-            max-width: 500px;
-            margin: 0 auto;
-        }
+    header {
+      text-align: center;
+      padding: 40px 0 20px;
+      border-bottom: 1px solid rgba(255, 215, 0, 0.3);
+      margin-bottom: 30px;
+    }
 
-        .story-card {
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(5px);
-            border-left: 3px solid var(--azul-blue);
-            padding: 15px;
-            display: flex;
-            align-items: center;
-            text-decoration: none;
-            color: #ddd;
-            border-radius: 0 10px 10px 0;
-            transition: 0.3s;
-        }
+    h1 { 
+      font-size: 1.5rem; 
+      color: var(--star-gold); 
+      letter-spacing: 4px; 
+      text-transform: uppercase;
+      text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+    }
 
-        .story-card img {
-            width: 70px;
-            height: 70px;
-            object-fit: cover;
-            border-radius: 5px;
-            margin-right: 15px;
-            border: 1px solid rgba(255,255,255,0.1);
-        }
+    .intro-text {
+      font-size: 0.9rem;
+      color: #aaa;
+      margin-top: 10px;
+    }
 
-        .series-tag { font-size: 9px; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 5px; }
-        .azul-tag { color: var(--azul-blue); }
-        .mochkil-tag { color: #ff8c00; }
+    /* Story Category Sections */
+    .series-group { margin-bottom: 40px; }
+    
+    .series-title {
+      font-size: 0.7rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
 
-        .back-home {
-            position: relative;
-            z-index: 10;
-            margin-top: 50px;
-            display: inline-block;
-            color: var(--star-gold);
-            text-decoration: none;
-            font-size: 10px;
-            border: 1px solid var(--star-gold);
-            padding: 10px 20px;
-        }
-    </style>
+    .series-title::after {
+      content: "";
+      flex-grow: 1;
+      height: 1px;
+      background: rgba(255,255,255,0.1);
+    }
+
+    /* Story Cards */
+    .story-card {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      border-radius: 15px;
+      padding: 15px;
+      display: flex;
+      gap: 15px;
+      text-decoration: none;
+      color: inherit;
+      margin-bottom: 15px;
+      transition: 0.3s;
+      backdrop-filter: blur(5px);
+    }
+
+    .story-card:active {
+      transform: scale(0.98);
+      background: rgba(255, 255, 255, 0.07);
+    }
+
+    .story-img {
+      width: 90px;
+      height: 90px;
+      border-radius: 10px;
+      object-fit: cover;
+      border: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .story-info h2 {
+      font-size: 1rem;
+      margin-bottom: 5px;
+      color: #fff;
+    }
+
+    .story-info p {
+      font-size: 0.8rem;
+      color: #888;
+      line-height: 1.3;
+    }
+
+    /* Accent Colors per Character */
+    .azul-card { border-left: 4px solid var(--azul-blue); }
+    .mochkil-card { border-left: 4px solid var(--mochkil-orange); }
+    .mish-card { border-left: 4px solid var(--mish-green); }
+    .elvie-card { border-left: 4px solid var(--cyber-pink); }
+
+    /* Footer Navigation */
+    footer {
+      text-align: center;
+      padding: 40px 0;
+      border-top: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .nav-btn {
+      display: inline-block;
+      padding: 10px 20px;
+      border: 1px solid var(--star-gold);
+      color: var(--star-gold);
+      text-decoration: none;
+      font-size: 0.8rem;
+      border-radius: 5px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+  </style>
 </head>
 <body>
 
-    <span class="star" style="top: 5%; left: 10%;">✨</span>
-    <span class="star" style="top: 15%; left: 85%; animation-delay: 1s;">🌟</span>
-    <span class="star" style="top: 40%; left: 5%; animation-delay: 0.5s;">✨</span>
-    <span class="star" style="top: 60%; left: 90%; animation-delay: 2s;">🌟</span>
-    <span class="star" style="top: 80%; left: 15%; animation-delay: 1.5s;">✨</span>
-    <span class="star" style="top: 95%; left: 75%;">🌟</span>
+  <div class="bg-stars">
+    <span class="star" style="top:10%; left:20%;">✨</span>
+    <span class="star" style="top:30%; left:80%; animation-delay:1s;">🌟</span>
+    <span class="star" style="top:70%; left:15%; animation-delay:2s;">✨</span>
+    <span class="star" style="top:85%; left:75%; animation-delay:3s;">🌟</span>
+  </div>
 
+  <div class="container">
     <header>
-        <h1>🌌 STARRY_NIGHT_ARCHIVE</h1>
-        <p style="font-size: 10px; color: #888;">✨ Where every story is a constellation ✨</p>
+      <h1>STARRY NIGHT</h1>
+      <p class="intro-text">The Illustrated Library of Maximum Reality</p>
     </header>
 
-    <div class="story-grid">
-        <a href="azul_watches_the_world.html" class="story-card">
-            <img src="azul_wtw_01_hero.PNG" alt="Azul">
-            <div>
-                <div class="series-tag azul-tag">AZUL SERIES</div>
-                <div style="font-weight: bold;">Watches the World</div>
-            </div>
-        </a>
-
-        <a href="01_mochkil_builds_something.html" class="story-card" style="border-left-color: #ff8c00;">
-            <img src="mochkil_kitchen.PNG" alt="Mochkil">
-            <div>
-                <div class="series-tag mochkil-tag">MOCHKIL SERIES</div>
-                <div style="font-weight: bold;">Mochkil Builds Something</div>
-            </div>
-        </a>
-
+    <div class="series-group">
+      <div class="series-title" style="color: var(--azul-blue);">Azul Series</div>
+      <a href="azul-watches-the-world.html" class="story-card azul-card">
+        <img src="azul_wtw_01_hero.PNG" class="story-img" alt="Azul">
+        <div class="story-info">
+          <h2>Watches the World</h2>
+          <p>Quietly observing as reality subtly glitches around him. ✨</p>
         </div>
+      </a>
+    </div>
 
-    <a href="index.html" class="back-home">RETURN TO COMMAND CENTER</a>
+    <div class="series-group">
+      <div class="series-title" style="color: var(--mochkil-orange);">Mochkil Series</div>
+      <a href="mochkil-builds-something.html" class="story-card mochkil-card">
+        <img src="mochkil_kitchen.PNG" class="story-img" alt="Mochkil">
+        <div class="story-info">
+          <h2>Mochkil Builds Something</h2>
+          <p>Moroccan flair meets technical chaos. 🛠️🌟</p>
+        </div>
+      </a>
+    </div>
+
+    <div class="series-group">
+      <div class="series-title" style="color: var(--mish-green);">Mishmish & Bziz</div>
+      <a href="mishmish-bziz-cookies.html" class="story-card mish-card">
+        <img src="mishmish_page6.PNG" class="story-img" alt="Mishmish">
+        <div class="story-info">
+          <h2>Date Cookie Disaster</h2>
+          <p>A high-stakes kitchen heist for secret cookies. 🫙✨</p>
+        </div>
+      </a>
+    </div>
+
+    <div class="series-group">
+      <div class="series-title" style="color: var(--cyber-pink);">Twin Branch Adventures</div>
+      <a href="elvie-tree-adventures.html" class="story-card elvie-card">
+        <img src="elvie_climbing_tree.PNG" class="story-img" alt="Elvie">
+        <div class="story-info">
+          <h2>Tree-Top Adventures</h2>
+          <p>High views of Twin Branch under Mama's watchful eye. 🌳🌟</p>
+        </div>
+      </a>
+    </div>
+
+    <footer>
+      <a href="index.html" class="nav-btn">Return to Command Center</a>
+      <p style="font-size: 10px; color: #444; margin-top: 20px;">© 2026 Maximum Reality</p>
+    </footer>
+  </div>
 
 </body>
 </html>

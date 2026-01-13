@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Birthday Mission | Maximum Reality</title>
+  <style>
+    body {
+      background-color: #0b1021;
+      color: #ffffff;
+      font-family: 'Avenir Next', sans-serif;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .birthday-box {
+      border: 3px dashed #ffb6c1;
+      border-radius: 40px;
+      padding: 30px;
+      margin: 20px auto;
+      max-width: 450px;
+      background: radial-gradient(circle, rgba(255,182,193,0.1) 0%, rgba(0,0,0,0) 70%);
+    }
+
+    h1 { color: #ffb6c1; text-shadow: 0 0 10px #ffb6c1; }
+
+    .story-text { font-size: 1.2rem; line-height: 1.8; margin: 25px 0; }
+
+    /* Hidden by default, revealed by the script below */
+    #birthday-surprise {
+      display: none;
+      font-size: 4rem;
+      animation: bounce 2s infinite;
+      margin-top: 20px;
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-20px); }
+    }
+
+    .nav-link {
+      display: inline-block;
+      margin-top: 40px;
+      color: #ffb6c1;
+      text-decoration: none;
+      font-weight: bold;
+      border: 1px solid #ffb6c1;
+      padding: 10px 20px;
+      border-radius: 50px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="birthday-box">
+    <h1>Mission: <br>The Two-Year Star</h1>
+    
+    <p class="story-text">
+      The cosmic clock is ticking! <b>Luna</b> is turning <b>Two</b> on January 15. 
+      The stars are lining up to bake a giant moon-cookie.
+    </p>
+
+    <p class="story-text">
+      But the frosting is missing! <b>Stella</b>, the Master Explorer, 
+      is crawling through the Milky Way to find the pinkest stardust in the galaxy.
+    </p>
+
+    <div id="birthday-surprise">
+      🧁<br>
+      <span style="font-size: 1rem; color: #ff69b4;">HAPPY 2nd BIRTHDAY LUNA!</span>
+    </div>
+  </div>
+
+  <a href="library.html" class="nav-link">← BACK TO THE LIBRARY</a>
+
+  <script>
+    // Logic to check for Luna's Birthday
+    const today = new Date();
+    const month = today.getMonth() + 1; // Months are 0-indexed
+    const day = today.getDate();
+
+    if (month === 1 && day === 15) {
+      document.getElementById('birthday-surprise').style.display = 'block';
+    }
+  </script>
+
+</body>
+</html>

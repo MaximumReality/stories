@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mochkil Builds Something | Story</title>
+  <style>
+    :root {
+      --mochkil-orange: #ff8c00;
+      --cyber-bg: #0a0a0a;
+      --text-gray: #d1d1d1;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    
+    body { 
+      background: var(--cyber-bg); 
+      color: var(--text-gray); 
+      font-family: -apple-system, system-ui, sans-serif;
+      line-height: 1.8;
+    }
+
+    /* Header & Progress */
+    header {
+      position: sticky;
+      top: 0;
+      background: rgba(10, 10, 10, 0.9);
+      backdrop-filter: blur(10px);
+      padding: 15px;
+      text-align: center;
+      border-bottom: 1px solid #222;
+      z-index: 100;
+    }
+
+    .story-title {
+      font-size: 0.8rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--mochkil-orange);
+      font-weight: bold;
+    }
+
+    /* Story Container */
+    .story-container {
+      max-width: 500px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    /* Page Styling */
+    .page-block {
+      margin-bottom: 60px;
+      text-align: center;
+      animation: fadeIn 1s ease-in;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .page-number {
+      font-family: monospace;
+      font-size: 0.7rem;
+      color: #444;
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    .story-text {
+      font-size: 1.1rem;
+      margin-bottom: 25px;
+      padding: 0 10px;
+    }
+
+    /* Image Styling */
+    .story-img {
+      width: 100%;
+      border-radius: 15px;
+      border: 1px solid #333;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+      transition: transform 0.3s;
+    }
+
+    .story-img:active {
+      transform: scale(1.05); /* Zoom effect for iPhone touch */
+    }
+
+    /* Quote Styling */
+    .quote {
+      color: #fff;
+      font-style: italic;
+      border-left: 2px solid var(--mochkil-orange);
+      padding-left: 15px;
+      margin: 20px 0;
+      text-align: left;
+    }
+
+    footer {
+      text-align: center;
+      padding: 60px 20px;
+      border-top: 1px solid #222;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 25px;
+      border: 1px solid var(--mochkil-orange);
+      color: var(--mochkil-orange);
+      text-decoration: none;
+      border-radius: 30px;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+
+    .btn:active {
+      background: var(--mochkil-orange);
+      color: #000;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="story-title">Mochkil Builds Something</div>
+  </header>
+
+  <div class="story-container">
+
+    <div class="page-block">
+      <span class="page-number">FILE_01</span>
+      <p class="story-text">Mochkil woke up in his cozy Moroccan kitchen. He stretched, twitched his tail, and looked around at all the spices and ingredients scattered on the counter.</p>
+      <img src="mochkil_kitchen.PNG" class="story-img" alt="Mochkil Kitchen">
+    </div>
+
+    <div class="page-block">
+      <span class="page-number">FILE_02</span>
+      <div class="quote">“I need a new idea!” he declared, flipping his tall chef hat.</div>
+      <p class="story-text">He glanced at Azul, floating lazily above the counter, who simply blinked and stared.</p>
+      <img src="mochkil_idea.PNG" class="story-img" alt="Mochkil Idea">
+    </div>
+
+    <div class="page-block">
+      <span class="page-number">FILE_03</span>
+      <p class="story-text">Mochkil thought hard. “I know! A game! And every recipe I make from now on will have Moroccan flair!”</p>
+      <p class="story-text">Azul twirled gently in the air, as if approving the plan.</p>
+      <img src="mochkil_game_plan.PNG" class="story-img" alt="Mochkil Game Plan">
+    </div>
+
+    <div class="page-block">
+      <span class="page-number">FILE_04</span>
+      <p class="story-text">He ran around the kitchen, whisking, chopping, and sprinkling spices with glee. Cumin, cinnamon, a pinch of magic — Mochkil worked as fast as his paws could move.</p>
+      <img src="mochkil_cooking.PNG" class="story-img" alt="Mochkil Cooking">
+    </div>
+
+    <div class="page-block">
+      <span class="page-number">FILE_05</span>
+      <p class="story-text">Finally, he paused, surveying his work. “Perfect,” he said, his whisk raised like a flag.</p>
+      <div class="quote">“CEO energy,” Mochkil whispered proudly.</div>
+      <img src="mochkil_proud.PNG" class="story-img" alt="Mochkil Proud">
+    </div>
+
+    <div class="page-block">
+      <span class="page-number">FILE_06</span>
+      <p class="story-text">And so, Mochkil’s first big idea was born: A game, recipes with Moroccan flair, and a little bit of chaos — just the way he liked it.</p>
+      <img src="mochkil_final.PNG" class="story-img" alt="Mochkil Celebration">
+    </div>
+
+    <footer>
+      <a href="stories.html" class="btn">Back to Library</a>
+      <p style="margin-top: 20px; font-size: 0.7rem; opacity: 0.4;">© 2026 MAXIMUM REALITY STORIES</p>
+    </footer>
+
+  </div>
+
+</body>
+</html>

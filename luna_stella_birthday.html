@@ -16,23 +16,24 @@
   
   h1 { color: #ffb6c1; margin: 20px 0; text-shadow: 0 0 10px #ffb6c1; font-size: 1.5rem; }
 
-  /* The Container for the "Panels" */
-  .image-panel {
-    width: 100%;
-    height: 400px; /* Increased height for better view on Pro Max */
-    background-image: url('luna_stella_birthday.PNG');
-    background-size: cover; /* This ensures it fills the width */
-    background-repeat: no-repeat;
-    border-radius: 25px;
-    margin: 20px 0;
-    border: 2px solid #ffb6c1;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
-  }
+      /* The "Window" Fix */
+    .image-panel {
+      width: 100%;
+      height: 380px; 
+      background-image: url('luna_stella_birthday.PNG');
+      /* This stretches the image to 100% width and 300% height 
+         (since there are 3 panels) */
+      background-size: 100% 300%; 
+      background-repeat: no-repeat;
+      border-radius: 25px;
+      margin: 20px 0;
+      border: 2px solid #ffb6c1;
+    }
 
-  /* Specific 'Camera' positions for your 3-part graphic */
-  .top-panel { background-position: center top; }
-  .mid-panel { background-position: center 50%; } /* Zooms into the Library Tree */
-  .bot-panel { background-position: center bottom; } /* Focuses on the Girls & One Mochkil */
+    /* Precise 'Trucker' Coordinates to lock each panel */
+    .top-panel { background-position: 0 0%; }      /* Panel 1: Moon Cookie */
+    .mid-panel { background-position: 0 50%; }     /* Panel 2: Library Tree */
+    .bot-panel { background-position: 0 100%; }    /* Panel 3: Guardians */
 
   p { 
     font-size: 1.1rem; 

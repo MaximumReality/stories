@@ -5,34 +5,66 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>The Birthday Mission</title>
   <style>
-    body { background-color: #0b1021; color: white; font-family: sans-serif; text-align: center; padding: 15px; }
-    
-    /* This creates the 'window' for your graphic panels */
-    .image-panel {
-      width: 100%;
-      height: 320px;
-      background-image: url('luna_stella_birthday.PNG');
-      background-size: 100% auto;
-      border-radius: 25px;
-      margin: 20px 0;
-      border: 2px solid #ffb6c1;
-    }
+  body { 
+    background-color: #0b1021; 
+    color: white; 
+    font-family: -apple-system, sans-serif; 
+    text-align: center; 
+    padding: 15px; 
+    margin: 0;
+  }
+  
+  h1 { color: #ffb6c1; margin: 20px 0; text-shadow: 0 0 10px #ffb6c1; font-size: 1.5rem; }
 
-    .top-panel { background-position: top; }
-    .mid-panel { background-position: center; }
-    .bot-panel { background-position: bottom; }
+  /* The Container for the "Panels" */
+  .image-panel {
+    width: 100%;
+    height: 400px; /* Increased height for better view on Pro Max */
+    background-image: url('luna_stella_birthday.PNG');
+    background-size: cover; /* This ensures it fills the width */
+    background-repeat: no-repeat;
+    border-radius: 25px;
+    margin: 20px 0;
+    border: 2px solid #ffb6c1;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+  }
 
-    h1 { color: #ffb6c1; margin-top: 30px; }
-    p { font-size: 1.2rem; line-height: 1.6; padding: 0 10px; }
+  /* Specific 'Camera' positions for your 3-part graphic */
+  .top-panel { background-position: center top; }
+  .mid-panel { background-position: center 50%; } /* Zooms into the Library Tree */
+  .bot-panel { background-position: center bottom; } /* Focuses on the Girls & One Mochkil */
 
-    #surprise { display: none; font-size: 3rem; animation: pulse 2s infinite; }
-    @keyframes pulse { 0% {transform: scale(1);} 50% {transform: scale(1.1);} 100% {transform: scale(1);} }
-    
-    .back-btn { 
-      display: inline-block; margin: 40px 0; padding: 15px 30px; 
-      color: #ffb6c1; border: 1px solid #ffb6c1; border-radius: 50px; text-decoration: none; 
-    }
-  </style>
+  p { 
+    font-size: 1.1rem; 
+    line-height: 1.6; 
+    padding: 0 15px; 
+    margin-bottom: 30px;
+    color: #f0f0f0;
+  }
+
+  .back-btn { 
+    display: inline-block; 
+    margin-top: 20px;
+    margin-bottom: 50px;
+    padding: 15px 40px; 
+    color: #ffb6c1; 
+    border: 2px solid #ffb6c1; 
+    border-radius: 50px; 
+    text-decoration: none; 
+    font-weight: bold;
+    background: rgba(255, 182, 193, 0.1);
+  }
+
+  #surprise { 
+    display: none; 
+    font-size: 3rem; 
+    padding: 20px;
+    border: 3px dotted #ffd700;
+    border-radius: 20px;
+    margin: 20px;
+  }
+</style>
+
 </head>
 <body>
 

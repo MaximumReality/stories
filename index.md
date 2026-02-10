@@ -34,7 +34,7 @@ Stories are illustrated and free for everyone to enjoy.
 ---
 [⬅ Back to Maximum Reality](https://maximumreality.xyz/)
 ---
-[The Librarians Key ➡️](https://maximumreality.github.io/backdoor/librarians-key.html)
+[The Librarian's Key ➡️](https://maximumreality.github.io/backdoor/librarians-key.html)
 ---
 💖 Support Maximum Reality  
 [Shop](https://maximum-reality-shop.fourthwall.com/) | [Coffee](https://buymeacoffee.com/MaximumReality) | [YouTube](https://www.youtube.com/@maximumrealityLori)

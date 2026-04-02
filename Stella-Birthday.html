@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stella’s Birthday Splash!</title>
+  <style>
+    body { 
+      background-color: #0b1021; 
+      color: white; 
+      font-family: -apple-system, sans-serif; 
+      text-align: center; 
+      padding: 0; 
+      margin: 0;
+    }
+
+    h1 { 
+      color: #ffd966; 
+      margin: 30px 0; 
+      text-shadow: 0 0 10px #ffd966; 
+      font-size: 1.8rem; 
+    }
+
+    .story-container { 
+      display: flex; 
+      flex-direction: column; 
+      width: 100%; 
+      gap: 0; 
+    }
+
+    .story-container img { 
+      width: 100%; 
+      display: block; 
+      border: none; 
+      margin: 0; 
+    }
+
+    p { 
+      font-size: 1.1rem; 
+      line-height: 1.6; 
+      padding: 25px 20px; 
+      margin: 0;
+      color: #f0f0f0;
+      background: #0b1021;
+    }
+
+    .back-btn { 
+      display: inline-block; 
+      margin: 40px 0 60px 0;
+      padding: 15px 40px; 
+      color: #ffd966; 
+      border: 2px solid #ffd966; 
+      border-radius: 50px; 
+      text-decoration: none; 
+      font-weight: bold;
+      background: rgba(255, 217, 102, 0.1);
+    }
+
+    #surprise { 
+      display: none; 
+      font-size: 2.5rem; 
+      padding: 20px;
+      border: 3px dotted #ffd700;
+      border-radius: 20px;
+      margin: 20px;
+      color: #ffd700;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Stella’s Birthday Splash!</h1>
+
+  <div class="story-container">
+
+    <img src="Stella-1.PNG" alt="Stella Birthday Page 1">
+    <p>Stella woke up on her very first birthday with a wiggle in her toes and a sparkle in her eyes. A trail of glowing blue droplets shimmered across the floor.</p>
+
+    <img src="Stella-2.PNG" alt="Stella Birthday Page 2">
+    <p>She followed the droplets to a shiny spoon that glowed like sunshine on water. Luna gasped. “You found the Birthday Spoon!”</p>
+
+    <img src="Stella-3.PNG" alt="Stella Birthday Page 3">
+    <p>Stella tapped a tower of colorful cups. DING! A tiny rainbow fountain burst out, sparkling and swirling in the air.</p>
+
+    <img src="Stella-4.PNG" alt="Stella Birthday Page 4">
+    <p>Her walker shimmered and became a Birthday Chariot. Stella zoomed forward, glowing droplets swirling around her wheels.</p>
+
+    <img src="Stella-5.PNG" alt="Stella Birthday Page 5">
+    <p>A friendly dog appeared with a happy wag. WOOF! He trotted ahead, leading Stella like a proud parade guide.</p>
+
+    <img src="Stella-6.PNG" alt="Stella Birthday Page 6">
+    <p>Stella tapped the glowing circle. SPLASH! A magical Birthday Splash Pool appeared, sparkling with rainbow water.</p>
+
+    <img src="Stella-7.PNG" alt="Stella Birthday Page 7">
+    <p>A glowing droplet landed on her spoon. Stella lit up with a warm golden glow. She found her Birthday Magic.</p>
+
+    <img src="Stella-8.PNG" alt="Stella Birthday Page 8">
+    <p>Luna scooped her into a big, splashy hug. “You shine so bright, Stella.” The dog curled beside them.</p>
+
+    <img src="Stella-9.PNG" alt="Stella Birthday Page 9">
+    <p>Stella lifted her spoon and tapped the air. DING. One glowing droplet floated upward like a tiny birthday wish.</p>
+
+  </div>
+
+  <div id="surprise">🎂✨<br><span style="font-size: 1.2rem;">HAPPY 1st BIRTHDAY STELLA!</span></div>
+
+  <a href="library.html" class="back-btn">Return to Library</a>
+
+  <script>
+    const d = new Date();
+    // Stella's birthday: adjust if needed
+    if (d.getMonth() === 0 && d.getDate() === 15) {
+      document.getElementById('surprise').style.display = 'block';
+    }
+  </script>
+
+</body>
+</html>

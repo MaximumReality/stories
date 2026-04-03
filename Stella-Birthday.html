@@ -65,6 +65,12 @@
       margin: 20px;
       color: #ffd700;
     }
+    .music-controls {
+  margin: 30px 0;
+  position: relative;
+  height: 80px; /* Gives space for the emojis to float up */
+}
+
   </style>
 </head>
 <body>
@@ -107,52 +113,60 @@
   <a href="library.html" class="back-btn">Return to Library</a>
 
   <script>
+      <script>
     const d = new Date();
-    // Stella's birthday: adjust if needed
-    if (d.getMonth() === 0 && d.getDate() === 15) {
+    // Stella's birthday: April 28th
+    // Month 3 is April, Date 28 is the 28th
+    if (d.getMonth() === 3 && d.getDate() === 28) {
       document.getElementById('surprise').style.display = 'block';
     }
   </script>
-<audio id="birthday-audio" src="birthday-music-box.mp3"></audio>
 
-<button onclick="playBirthday()" 
-    style="background:#f7cfe3; color:#5a2a4a; padding:12px 28px; border-radius:30px; border:2px solid #f3b6d3; font-weight:bold; font-size:14px; font-family:'Comic Sans MS','Chalkboard SE',sans-serif; box-shadow:0 4px 12px rgba(247,207,227,0.6); cursor:pointer;">
-    🎵 Play Music Box
-</button>
+  </script>
+<div style="margin: 40px 0; position: relative; min-height: 120px;">
+  
+  <audio id="birthday-audio" src="birthday-music-box.mp3"></audio>
 
-<div id="floating-emojis" style="position:relative;"></div>
+  <button onclick="playBirthday()" 
+      style="background:#f7cfe3; color:#5a2a4a; padding:12px 28px; border-radius:30px; border:2px solid #f3b6d3; font-weight:bold; font-size:16px; font-family:'Comic Sans MS',sans-serif; box-shadow:0 4px 12px rgba(247,207,227,0.6); cursor:pointer; position: relative; z-index: 10;">
+      🎵 Play Music Box
+  </button>
+
+  <div id="floating-emojis" style="position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 200px; pointer-events: none;"></div>
+
+</div>
 
 <script>
 function playBirthday() {
   const audio = document.getElementById('birthday-audio');
   audio.play();
 
-  // spawn floating emojis
   const container = document.getElementById('floating-emojis');
   const emojis = ["🎶","🎈","✨","🎈","🎶"];
+  
   emojis.forEach((emoji, i) => {
     let span = document.createElement("span");
     span.textContent = emoji;
     span.style.position = "absolute";
-    span.style.left = (20 + i*30) + "px";
+    // Spreads them out horizontally
+    span.style.left = (i * 40) + "px"; 
     span.style.bottom = "0px";
-    span.style.fontSize = "24px";
+    span.style.fontSize = "30px";
     span.style.opacity = "1";
     span.style.transition = "all 3s ease-out";
     container.appendChild(span);
 
-    // trigger animation
+    // Animation: float UP and fade OUT
     setTimeout(() => {
-      span.style.transform = "translateY(-100px)";
+      span.style.transform = "translateY(-150px) rotate(" + (Math.random() * 40 - 20) + "deg)";
       span.style.opacity = "0";
     }, 50);
 
-    // remove after animation
+    // Cleanup
     setTimeout(() => span.remove(), 3000);
   });
 }
 </script>
-
 
 </body>
 </html>

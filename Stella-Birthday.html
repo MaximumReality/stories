@@ -113,6 +113,29 @@
       document.getElementById('surprise').style.display = 'block';
     }
   </script>
+<audio id="birthday-audio" src="birthday-music-box.mp3"></audio>
+
+<button 
+    onclick="document.getElementById('birthday-audio').play()" 
+    style="
+        background: #f7cfe3;
+        color: #5a2a4a;
+        padding: 12px 28px;
+        border-radius: 30px;
+        border: 2px solid #f3b6d3;
+        font-weight: bold;
+        font-size: 14px;
+        font-family: 'Comic Sans MS', 'Chalkboard SE', sans-serif;
+        box-shadow: 0 4px 12px rgba(247, 207, 227, 0.6);
+        cursor: pointer;
+        margin-top: 20px;
+        transition: transform 0.1s ease;
+    "
+    onmousedown="this.style.transform='scale(0.96)'"
+    onmouseup="this.style.transform='scale(1)'"
+>
+    🎵 Play Music Box
+</button>
 
 </body>
 </html>

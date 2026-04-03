@@ -104,15 +104,27 @@
     <p>Luna scooped her into a big, splashy hug. “You shine so bright, Stella.” The dog curled beside them.</p>
 
     <img src="Stella-9.PNG" alt="Stella Birthday Page 9">
-    <p>Stella lifted her spoon and tapped the air. DING. One glowing droplet floated upward like a tiny birthday wish.</p>
+<p>Stella lifted her spoon and tapped the air. DING. One glowing droplet floated upward like a tiny birthday wish.</p>
 
-  </div>
+<div style="margin-top: 50px; padding-bottom: 80px; display: flex; flex-direction: column; align-items: center;">
+  
+  <audio id="birthday-audio" src="birthday-music-box.mp3"></audio>
+
+  <button onclick="playBirthday()" 
+      style="background:#f7cfe3; color:#5a2a4a; padding:15px 35px; border-radius:50px; border:2px solid #f3b6d3; font-weight:bold; font-size:16px; font-family:'Comic Sans MS',sans-serif; box-shadow:0 6px 15px rgba(247,207,227,0.4); cursor:pointer; position: relative; z-index: 10;">
+      ✨ Wind Up the Music Box ✨
+  </button>
+
+  <div id="floating-emojis" style="position: relative; width: 100%; height: 0; pointer-events: none;"></div>
+
+</div>
+
 
   <div id="surprise">🎂✨<br><span style="font-size: 1.2rem;">HAPPY 1st BIRTHDAY STELLA!</span></div>
 
   <a href="library.html" class="back-btn">Return to Library</a>
 
-  <script>
+  
       <script>
     const d = new Date();
     // Stella's birthday: April 28th
@@ -122,48 +134,39 @@
     }
   </script>
 
-  </script>
-<div style="margin: 40px 0; position: relative; min-height: 120px;">
-  
-  <audio id="birthday-audio" src="birthday-music-box.mp3"></audio>
-
-  <button onclick="playBirthday()" 
-      style="background:#f7cfe3; color:#5a2a4a; padding:12px 28px; border-radius:30px; border:2px solid #f3b6d3; font-weight:bold; font-size:16px; font-family:'Comic Sans MS',sans-serif; box-shadow:0 4px 12px rgba(247,207,227,0.6); cursor:pointer; position: relative; z-index: 10;">
-      🎵 Play Music Box
-  </button>
-
-  <div id="floating-emojis" style="position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 200px; pointer-events: none;"></div>
-
-</div>
-
-<script>
+  <script>
 function playBirthday() {
   const audio = document.getElementById('birthday-audio');
   audio.play();
 
   const container = document.getElementById('floating-emojis');
-  const emojis = ["🎶","🎈","✨","🎈","🎶"];
+  const emojis = ["🎶","✨","🎈","🌙","✨"];
   
   emojis.forEach((emoji, i) => {
-    let span = document.createElement("span");
-    span.textContent = emoji;
-    span.style.position = "absolute";
-    // Spreads them out horizontally
-    span.style.left = (i * 40) + "px"; 
-    span.style.bottom = "0px";
-    span.style.fontSize = "30px";
-    span.style.opacity = "1";
-    span.style.transition = "all 3s ease-out";
-    container.appendChild(span);
-
-    // Animation: float UP and fade OUT
-    setTimeout(() => {
-      span.style.transform = "translateY(-150px) rotate(" + (Math.random() * 40 - 20) + "deg)";
+    setTimeout(() => { // Slight delay between each emoji for a 'sequence' feel
+      let span = document.createElement("span");
+      span.textContent = emoji;
+      span.style.position = "absolute";
+      span.style.left = "50%";
+      span.style.bottom = "20px";
+      span.style.marginLeft = (i * 30 - 60) + "px"; // Spreads them out from the center
+      span.style.fontSize = "28px";
       span.style.opacity = "0";
-    }, 50);
+      span.style.transition = "all 4s ease-out";
+      container.appendChild(span);
 
-    // Cleanup
-    setTimeout(() => span.remove(), 3000);
+      // Animation start
+      setTimeout(() => {
+        span.style.transform = "translateY(-180px) rotate(" + (Math.random() * 60 - 30) + "deg)";
+        span.style.opacity = "1";
+      }, 50);
+
+      // Fade out toward the top
+      setTimeout(() => { span.style.opacity = "0"; }, 2500);
+      
+      // Cleanup
+      setTimeout(() => span.remove(), 4000);
+    }, i * 300); 
   });
 }
 </script>

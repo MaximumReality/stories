@@ -142,50 +142,48 @@ function playBirthday() {
   const emojis = ["🎶","✨","🎈","🌙","✨"];
   
   emojis.forEach((emoji, i) => {
-    setTimeout(() => { // Slight delay between each emoji for a 'sequence' feel
+    setTimeout(() => { 
       let span = document.createElement("span");
       span.textContent = emoji;
       span.style.position = "absolute";
       span.style.left = "50%";
       span.style.bottom = "20px";
-      span.style.marginLeft = (i * 30 - 60) + "px"; // Spreads them out from the center
-      span.style.fontSize = "28px";
+      span.style.marginLeft = (i * 30 - 60) + "px"; 
       span.style.opacity = "0";
-      span.style.transition = "all 4s ease-out";
+      span.style.transition = "all 6s ease-out"; // longer drift
       container.appendChild(span);
 
-      
       // Animation start
-setTimeout(() => {
-  const randomX = Math.random() * 100 - 50; // drift between -50px and +50px
-  const randomSize = 22 + Math.random() * 14; // size between 22px and 36px
-  span.style.fontSize = randomSize + "px";
-  span.style.transform = "translate(" + randomX + "px, -220px) rotate(" + (Math.random() * 60 - 30) + "deg)";
-  span.style.opacity = "1";
-  span.style.textShadow = "0 0 8px #ffd966, 0 0 15px #ffafcc"; // soft glow shimmer
+      setTimeout(() => {
+        const randomX = Math.random() * 100 - 50; 
+        const randomSize = 22 + Math.random() * 14; 
+        span.style.fontSize = randomSize + "px";
+        span.style.transform = "translate(" + randomX + "px, -220px) rotate(" + (Math.random() * 60 - 30) + "deg)";
+        span.style.opacity = "1";
+        span.style.textShadow = "0 0 8px #ffd966, 0 0 15px #ffafcc"; 
 
-  // Twinkle pulse effect
-  let pulse = 0;
-  const twinkle = setInterval(() => {
-    pulse = (pulse + 1) % 2;
-    span.style.textShadow = pulse 
-      ? "0 0 12px #ffd966, 0 0 20px #ffafcc" 
-      : "0 0 6px #ffd966, 0 0 12px #ffafcc";
-  }, 500); // switch glow every half second
+        // Twinkle pulse effect
+        let pulse = 0;
+        const twinkle = setInterval(() => {
+          pulse = (pulse + 1) % 2;
+          span.style.textShadow = pulse 
+            ? "0 0 12px #ffd966, 0 0 20px #ffafcc" 
+            : "0 0 6px #ffd966, 0 0 12px #ffafcc";
+        }, 500);
 
-  // Stop twinkle when fading out
-  setTimeout(() => clearInterval(twinkle), 5500);
-}, 50);
+        // Stop twinkle when fading out
+        setTimeout(() => clearInterval(twinkle), 5500);
+      }, 50);
 
-// Fade out toward the top (slower, 5.5 seconds)
-setTimeout(() => { span.style.opacity = "0"; }, 5500);
+      // Fade out toward the top
+      setTimeout(() => { span.style.opacity = "0"; }, 5500);
 
-// Cleanup (remove after 6 seconds)
-setTimeout(() => span.remove(), 6000);
-
- 
+      // Cleanup
+      setTimeout(() => span.remove(), 6000);
+    }, i * 300); 
   });
 }
+
 </script>
 
 </body>

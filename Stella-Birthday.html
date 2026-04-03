@@ -154,18 +154,36 @@ function playBirthday() {
       span.style.transition = "all 4s ease-out";
       container.appendChild(span);
 
-      // Animation start
-      setTimeout(() => {
-        span.style.transform = "translateY(-180px) rotate(" + (Math.random() * 60 - 30) + "deg)";
-        span.style.opacity = "1";
-      }, 50);
-
-      // Fade out toward the top
-      setTimeout(() => { span.style.opacity = "0"; }, 2500);
       
-      // Cleanup
-      setTimeout(() => span.remove(), 4000);
-    }, i * 300); 
+      // Animation start
+setTimeout(() => {
+  const randomX = Math.random() * 100 - 50; // drift between -50px and +50px
+  const randomSize = 22 + Math.random() * 14; // size between 22px and 36px
+  span.style.fontSize = randomSize + "px";
+  span.style.transform = "translate(" + randomX + "px, -220px) rotate(" + (Math.random() * 60 - 30) + "deg)";
+  span.style.opacity = "1";
+  span.style.textShadow = "0 0 8px #ffd966, 0 0 15px #ffafcc"; // soft glow shimmer
+
+  // Twinkle pulse effect
+  let pulse = 0;
+  const twinkle = setInterval(() => {
+    pulse = (pulse + 1) % 2;
+    span.style.textShadow = pulse 
+      ? "0 0 12px #ffd966, 0 0 20px #ffafcc" 
+      : "0 0 6px #ffd966, 0 0 12px #ffafcc";
+  }, 500); // switch glow every half second
+
+  // Stop twinkle when fading out
+  setTimeout(() => clearInterval(twinkle), 5500);
+}, 50);
+
+// Fade out toward the top (slower, 5.5 seconds)
+setTimeout(() => { span.style.opacity = "0"; }, 5500);
+
+// Cleanup (remove after 6 seconds)
+setTimeout(() => span.remove(), 6000);
+
+ 
   });
 }
 </script>

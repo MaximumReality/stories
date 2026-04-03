@@ -113,29 +113,46 @@
       document.getElementById('surprise').style.display = 'block';
     }
   </script>
-<audio id="birthday-audio" src="birthday-music-box.mp3"></audio>
+<audio id="birthday-audio" src="happy-birthday.mp3"></audio>
 
-<button 
-    onclick="document.getElementById('birthday-audio').play()" 
-    style="
-        background: #f7cfe3;
-        color: #5a2a4a;
-        padding: 12px 28px;
-        border-radius: 30px;
-        border: 2px solid #f3b6d3;
-        font-weight: bold;
-        font-size: 14px;
-        font-family: 'Comic Sans MS', 'Chalkboard SE', sans-serif;
-        box-shadow: 0 4px 12px rgba(247, 207, 227, 0.6);
-        cursor: pointer;
-        margin-top: 20px;
-        transition: transform 0.1s ease;
-    "
-    onmousedown="this.style.transform='scale(0.96)'"
-    onmouseup="this.style.transform='scale(1)'"
->
+<button onclick="playBirthday()" 
+    style="background:#f7cfe3; color:#5a2a4a; padding:12px 28px; border-radius:30px; border:2px solid #f3b6d3; font-weight:bold; font-size:14px; font-family:'Comic Sans MS','Chalkboard SE',sans-serif; box-shadow:0 4px 12px rgba(247,207,227,0.6); cursor:pointer;">
     🎵 Play Music Box
 </button>
+
+<div id="floating-emojis" style="position:relative;"></div>
+
+<script>
+function playBirthday() {
+  const audio = document.getElementById('birthday-audio');
+  audio.play();
+
+  // spawn floating emojis
+  const container = document.getElementById('floating-emojis');
+  const emojis = ["🎶","🎈","✨","🎈","🎶"];
+  emojis.forEach((emoji, i) => {
+    let span = document.createElement("span");
+    span.textContent = emoji;
+    span.style.position = "absolute";
+    span.style.left = (20 + i*30) + "px";
+    span.style.bottom = "0px";
+    span.style.fontSize = "24px";
+    span.style.opacity = "1";
+    span.style.transition = "all 3s ease-out";
+    container.appendChild(span);
+
+    // trigger animation
+    setTimeout(() => {
+      span.style.transform = "translateY(-100px)";
+      span.style.opacity = "0";
+    }, 50);
+
+    // remove after animation
+    setTimeout(() => span.remove(), 3000);
+  });
+}
+</script>
+
 
 </body>
 </html>

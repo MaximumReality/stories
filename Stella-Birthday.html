@@ -48,6 +48,44 @@
   filter: hue-rotate(90deg) brightness(1.2);
   transition: 0.2s;
 }
+/* The Splash Effect */
+.tap-splash {
+  position: absolute;
+  pointer-events: none;
+  z-index: 999;
+}
+
+.tap-ring {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border: 3px solid #ffd966; /* Match your story's gold/yellow */
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  animation: ripple-out 0.6s ease-out forwards;
+  box-shadow: 0 0 15px #ffd966;
+}
+
+.tap-droplet {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: #00d4ff; /* Match the "glowing blue droplets" */
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  animation: drop-fly 0.7s ease-out forwards;
+  box-shadow: 0 0 10px #00d4ff;
+}
+
+@keyframes ripple-out {
+  0% { width: 10px; height: 10px; opacity: 1; border-width: 6px; }
+  100% { width: 180px; height: 180px; opacity: 0; border-width: 1px; }
+}
+
+@keyframes drop-fly {
+  0% { transform: translate(-50%, -50%) scale(1); opacity: 1; }
+  100% { transform: translate(var(--dx), var(--dy)) scale(0); opacity: 0; }
+}
 
     .back-btn { 
       display: inline-block; 
@@ -189,6 +227,44 @@ function playBirthday() {
   });
 }
 
+</script>
+<script>
+document.addEventListener('touchstart', (e) => {
+  // Get coordinates even while scrolling
+  const touch = e.touches[0];
+  createSplash(touch.pageX, touch.pageY);
+}, { passive: true });
+
+document.addEventListener('mousedown', (e) => {
+  createSplash(e.pageX, e.pageY);
+});
+
+function createSplash(x, y) {
+  const container = document.createElement('div');
+  container.className = 'tap-splash';
+  container.style.left = x + 'px';
+  container.style.top = y + 'px';
+  document.body.appendChild(container);
+
+  // Expanding gold ring
+  const ring = document.createElement('div');
+  ring.className = 'tap-ring';
+  container.appendChild(ring);
+
+  // 6 Blue flying droplets
+  for (let i = 0; i < 6; i++) {
+    const drop = document.createElement('div');
+    drop.className = 'tap-droplet';
+    const angle = (Math.PI * 2 / 6) * i;
+    const dist = 40 + Math.random() * 40;
+    drop.style.setProperty('--dx', Math.cos(angle) * dist + 'px');
+    drop.style.setProperty('--dy', Math.sin(angle) * dist + 'px');
+    container.appendChild(drop);
+  }
+
+  // Cleanup
+  setTimeout(() => container.remove(), 700);
+}
 </script>
 
 </body>
